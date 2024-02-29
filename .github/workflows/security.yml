@@ -16,4 +16,10 @@ jobs:
 
 
       - name: Run Bandit Scan
-        run: bandit -r .
+        run: bandit -r . -lll -ii -f json -o security_findings.json 
+
+      - name: Upload Artifact
+        uses: action/uploead-artifact@v4
+        if: always()
+        with:
+          path: bandit_findings.json

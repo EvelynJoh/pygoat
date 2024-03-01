@@ -42,5 +42,5 @@ jobs:
       - name: Docker Scout Scan
         uses: docker/scout-action@v1.5.0
         with: 
-          dockerhub-user: ${{ secrects.DOCKER_HUB }}
+          dockerhub-user: ${{ secrects.DOCKERHUB_USER }}
           dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}
